@@ -12,8 +12,9 @@
     "test": "mocha"
   },
   "dependencies": {
+    "webdriverjs": "0.6.9",
     "mocha": "*",
-    "chai": "*"
+    "chai": "1.0.4"
   },
   "devDependencies": {},
   "optionalDependencies": {},
