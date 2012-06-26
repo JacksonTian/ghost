@@ -4,7 +4,7 @@ var should = require('chai').should();
 
 describe('Home', function () {
   var page;
-  before(function (done) {
+  before(function () {
     page = client.init().url("http://shu.taobao.com/");
   });
 
