@@ -1,0 +1,23 @@
+{
+  "author": "JacksonTian",
+  "name": "node-ghost",
+  "description": "Node Front-end automation test framework",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TBEDP/ghost.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
