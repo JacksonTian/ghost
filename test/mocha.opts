@@ -1,7 +1,3 @@
 --reporter dot
 --ui bdd
-<<<<<<< HEAD
---timeout 10000
-=======
 --timeout 60000
->>>>>>> 57183764052479fe083fcdbc435156792fc4115c
