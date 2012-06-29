@@ -3,48 +3,42 @@ var Page = require('../lib/page.js');
 var path = require('path');
 
 describe('Home', function () {
-  var ghost = new Ghost();
+  var ghost;
   before(function () {
-    var page = new Page("chrome");
-    page.url("http://shu.taobao.com/");
-    ghost.setContext(page);
+    ghost = new Ghost("Chrome", "http://shu.taobao.com/");
   });
 
-  after(function () {
-    ghost.use('end', function () {});
+  after(function (done) {
+    ghost.end(done);
   });
 
   it('Title should be 淘宝指数 - 淘宝消费者数据研究平台', function (done) {
-    ghost.use("getTitle", function (title) {
+    ghost.getTitle(function (title) {
       title.should.be.equal("淘宝指数 - 淘宝消费者数据研究平台");
       done();
     });
   });
 
   it('start page should not visible', function (done) {
-    ghost.use("isVisible", ["#startpage"], function (isVisible) {
+    ghost.isVisible("#startpage", function (isVisible) {
       isVisible.should.be.equal(false);
     });
     var tmp = path.join(__dirname, "../screenshot/screenshot_" + new Date().getTime() + ".png");
-    ghost.use("saveScreenshot", [tmp], function () {
-      done();
-    });
-  });
-
-  it('start button should be visible', function (done) {
-    ghost.use("isVisible", [".btn_start_index"], function (isVisible) {
-      isVisible.should.be.equal(true);
+    ghost.saveScreenshot(tmp, function () {
       done();
     });
   });
 
   it('start button should not be visible', function (done) {
-    ghost.use("click", [".btn_start_index"], function () {})
-    .use("isVisible", ["#startpage"], function (isVisible) {
+    ghost.isVisible(".btn_start_index", function (isVisible) {
       isVisible.should.be.equal(true);
     })
-    .use("isVisible", [".btn_start_index"], function (isVisible) {
-      console.log("btn_start_index");
+    .click("img.btn_start_index", function () {})
+    .pause(2000, function (){})
+    .isVisible("#startpage", function (isVisible) {
+      isVisible.should.be.equal(true);
+    })
+    .isVisible(".btn_start_index", function (isVisible) {
       isVisible.should.be.equal(false);
       done();
     });
