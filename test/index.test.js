@@ -1,23 +1,17 @@
-var webdriverjs = require('webdriverjs');
 var Ghost = require('../lib/ghost.js');
-var client = webdriverjs.remote({
-  desiredCapabilities: {browserName: "chrome"},
-  logLevel: 'silent'
-});
-
+var Page = require('../lib/page.js');
 var path = require('path');
 
 describe('Home', function () {
   var ghost = new Ghost();
   before(function () {
-    var page = client.init().url("http://shu.taobao.com/");
+    var page = new Page("chrome");
+    page.url("http://shu.taobao.com/");
     ghost.setContext(page);
   });
 
   after(function () {
-    ghost.use('end', function () {
-      console.log("close");
-    });
+    ghost.use('end', function () {});
   });
 
   it('Title should be 淘宝指数 - 淘宝消费者数据研究平台', function (done) {
@@ -55,6 +49,4 @@ describe('Home', function () {
       done();
     });
   });
-
-  
 });

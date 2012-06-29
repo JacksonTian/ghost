@@ -1,4 +1,4 @@
 --require should
---reporter spec
+--reporter tap
 --ui bdd
 --timeout 10000
