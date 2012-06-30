@@ -1,5 +1,4 @@
 var Ghost = require('../lib/ghost.js');
-var Page = require('../lib/page.js');
 var path = require('path');
 
 describe('Home', function () {
