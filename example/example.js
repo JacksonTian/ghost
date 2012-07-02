@@ -5,4 +5,6 @@ ghost.setValue('input[name="q"]', "Cheese!", function () {
   console.log("set cheese!");
 }).submitForm("#tsf", function () {
   console.log("submited");
+}).getTitle(function (title) {
+  console.log(title);
 });
