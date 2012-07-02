@@ -10,6 +10,7 @@ Prerequirement
 ```
 java -jar selenium-server-standalone-2.x.x.jar
 ```
+3. 如果需要在Chrome上运行自动化脚本，请下载[Chrome driver](http://code.google.com/p/chromedriver/downloads/list)
 
 TODO
 ========
