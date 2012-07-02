@@ -4,7 +4,7 @@ var path = require('path');
 describe('Home', function () {
   var ghost;
   before(function () {
-    ghost = new Ghost("Chrome", "http://shu.taobao.com/");
+    ghost = new Ghost("Chrome", "http://shu.taobao.com/", {host: "10.13.191.77"});
   });
 
   after(function (done) {
