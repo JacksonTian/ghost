@@ -1,20 +1,20 @@
 {
   "author": "JacksonTian",
-  "name": "node-ghost",
+  "name": "webghost",
   "description": "Node Front-end automation test framework",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/TBEDP/ghost.git"
   },
-  "main": "index.js",
+  "main": "./lib/ghost.js",
   "scripts": {
     "test": "mocha"
   },
   "dependencies": {
     "webdriverjs": "0.6.9",
     "mocha": "*",
-    "chai": "1.0.4"
+    "should": "0.6.3"
   },
   "devDependencies": {},
   "optionalDependencies": {},
