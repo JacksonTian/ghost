@@ -12,7 +12,6 @@
     "test": "mocha"
   },
   "dependencies": {
-    "webdriverjs": "0.6.9",
     "mocha": "*",
     "should": "0.6.3"
   },

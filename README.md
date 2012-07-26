@@ -1,7 +1,9 @@
 Ghost
 ========
 
-Node Front-end automation test framework written in Node.js
+Node Front-end automation test framework written in Node.js.  
+基于Selenium WebDriver和Camme的Webdriverjs实现。
+
 
 # Prerequirement
 - 下载[webdriver2.0服务包](http://code.google.com/p/selenium/downloads/detail?name=selenium-server-standalone-2.24.1.jar&can=2&q=)
