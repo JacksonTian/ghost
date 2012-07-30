@@ -3,10 +3,12 @@
 ```javascript
 var Ghost = require('webghost');
 
-var ghost = new Ghost("http://www.google.com/");
-ghost.setValue('input[name="q"]', "Cheese!") // 输入Cheese!
-.submitForm("#tsf") // 提交表单
-.pause(1000) // 暂停1秒，等待跳转
+var ghost = new Ghost();
+ghost.open() // 打开浏览器
+.go("http://www.google.com/") // 访问Google
+.val('input[name="q"]', "Cheese!") // 输入Cheese!
+.submit("#tsf") // 提交表单
+.await(1000) // 暂停1秒，等待跳转
 .getTitle(function (title) {
   console.log("Page title is: " + title); // 打印标题
 });
