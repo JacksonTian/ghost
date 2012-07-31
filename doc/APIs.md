@@ -47,10 +47,21 @@ opts的选项有：
 `selector`：css选择器  
 `callback`：返回文本值  
 
-### val(selector, value)  
+### val(selector, value, [callback])  
 实例方法。查找某个输入元素，输入值  
 `selector`：css选择器  
 `value`：输入值  
+`callback`：输入完毕后执行回调
+
+### val(selector, [callback])  
+实例方法。查找某个输入元素，获取值  
+`selector`：css选择器  
+`callback`：返回元素的值
+
+### hasClass(selector, className, callback)  
+实例方法。根据选择器查找元素，并获取该元素是否包含指定的class  
+`selector`：css选择器  
+`callback`：返回是否含有某个类
 
 ### done(callback)  
 实例方法。前述方法执行完毕后，将会调用回调执行  
