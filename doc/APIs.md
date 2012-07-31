@@ -20,6 +20,10 @@ opts的选项有：
 `url`：网页地址  
 `callback`：页面打开后会执行。  
 
+### url(callback)  
+实例方法。获取当前页的URL地址  
+`callback`：返回当前页面的URL。  
+
 ### getTitle(callback)  
 实例方法。获取当前页面title  
 `callback`: 返回title  
