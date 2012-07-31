@@ -2,7 +2,7 @@
   "author": "JacksonTian",
   "name": "webghost",
   "description": "Node Front-end automation test framework",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "repository": {
     "type": "git",
     "url": "git://github.com/TBEDP/ghost.git"
