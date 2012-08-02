@@ -63,6 +63,12 @@ opts的选项有：
 `selector`：css选择器  
 `callback`：返回是否含有某个类
 
+### attr(selector, attributeName, callback)  
+实例方法。根据选择器查找元素，并获取该元素的属性  
+`selector`：css选择器  
+`attributeName`：属性名  
+`callback`：返回属性的值  
+
 ### done(callback)  
 实例方法。前述方法执行完毕后，将会调用回调执行  
 `callback`：回调函数  
