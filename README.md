@@ -33,3 +33,4 @@ npm install webghost
 3. 集成mocha/should.
 4. 组织成框架.
 5. 写cases.
+6. 更新文档
