@@ -19,7 +19,7 @@
 
 var Ghost = require('../lib/ghost');
 
-var ghost = new Ghost({browser: "chrome", host: "10.13.191.77"});
+var ghost = new Ghost({browser: "chrome", host: "10.13.188.91"});
 ghost.open()
 .go("http://www.google.com/webhp?complete=1&hl=en")
 .val('input[name="q"]', "Cheese!") // 输入Cheese!
