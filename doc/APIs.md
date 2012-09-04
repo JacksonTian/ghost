@@ -11,6 +11,10 @@ opts的选项有：
 `host`：指定Selenium服务位置。默认为`localhost`  
 `port`：指定Selenium服务的端口。默认为4444  
 
+### status([callback])  
+实例方法。获取WebDriver服务器的状态  
+`callback`：返回服务端状态，包括os和build。  
+
 ### open([callback])  
 实例方法。打开浏览器客户端  
 `callback`：浏览器打开后会执行  
@@ -75,4 +79,16 @@ opts的选项有：
 
 ### end(callback)  
 实例方法。关闭浏览器，结束回话  
+`callback`： 回话结束后，调用执行  
+
+### getAlertText([callback])  
+实例方法。获取弹出框上的文本  
+`callback`： 回话结束后，调用执行，返回弹出框上的文本
+
+### accept([callback])  
+实例方法。点击弹出框alert、confirm、prompt的确认按钮
+`callback`： 回话结束后，调用执行  
+
+### dismiss([callback])  
+实例方法。点击弹出框alert的确认按钮，confirm、prompt的取消按钮
 `callback`： 回话结束后，调用执行  
